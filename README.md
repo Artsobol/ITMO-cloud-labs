@@ -5,3 +5,5 @@
 2. Соболев Артём
 
    
+![image](https://github.com/user-attachments/assets/7fad6fdf-e2c3-452d-ba88-9d612e5c00a8)
+Готовых лаб ещё нет, но есть красивый котик
