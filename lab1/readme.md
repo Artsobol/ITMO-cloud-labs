@@ -145,5 +145,7 @@ server {
 ## Источники
 
 [Что такое Nginx](https://www.youtube.com/watch?v=6Df5vJC-G8Q)
+
 [Руководство по Nginx](https://nginx.org/ru/docs/beginners_guide.html)
+
 [alias nginx](https://www.youtube.com/watch?v=8P2r0xSXk28)
