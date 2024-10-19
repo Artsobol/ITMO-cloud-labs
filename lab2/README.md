@@ -135,6 +135,7 @@ USER fast
 ## Источники
 
 [Что такое докер](https://www.youtube.com/watch?v=jVV8CVURmrE&list=PLqVeG_R3qMSwjnkMUns_Yc4zF_PtUZmB-)
+
 [Пишем dockerfile](https://www.youtube.com/watch?v=_pmbcKuxNkk&list=PLqVeG_R3qMSwjnkMUns_Yc4zF_PtUZmB-&index=7)
 
 <img src="2.jpg" alt="Устали" width="800"/>

@@ -264,7 +264,9 @@ networks:
 ## Источники, которые мы использовали
 
 [Руководство по docker compose](https://habr.com/ru/companies/ruvds/articles/450312/)
+
 [Написание docker compose](https://www.youtube.com/watch?v=p8tNcUIQzZU)
+
 [Как работает сеть в Docker](https://www.youtube.com/watch?v=ctJnI43ermQ)
 
 <img src="3.jpg" alt="Мишка" width="800"/>
