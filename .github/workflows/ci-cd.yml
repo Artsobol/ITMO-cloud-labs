@@ -28,6 +28,8 @@ jobs:
           pip install -r lab3/good_cicd/requirements.txt
 
       - name: Test
+        env:
+          PYTHONPATH: .
         run: |
           pytest lab3/good_cicd/tests --cov=lab3/good_cicd/src
 
