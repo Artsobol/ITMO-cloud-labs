@@ -29,8 +29,7 @@ jobs:
 
       - name: Test
         run: |
-          # Используем pytest с покрытием кода
-          pytest --cov=./
+          pytest lab3/good_cicd/tests --cov=lab3/good_cicd/src
 
       - name: Build
         run: |
