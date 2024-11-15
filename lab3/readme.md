@@ -84,6 +84,7 @@ jobs:
  <img src="bad_ci-cd.png" alt="gbad ci/cd pipeline" width="800"/>
  
  P.S. указанный аккаунт на докерхабе мы создали специально для этой лабы, поэтому ничем не рискуем
+ 
  Посмотреть запущенные пайплайны можно по [ссылке](https://github.com/Artsobol/ITMO-cloud-labs/tree/main/.github/workflows).
 
 
