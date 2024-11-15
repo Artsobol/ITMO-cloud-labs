@@ -21,7 +21,7 @@ jobs:
       - name: Cache pip dependencies
         uses: actions/cache@v3
         with:
-          path: venv/lib/python3.8/site-packages
+          path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
@@ -29,6 +29,7 @@ jobs:
       - name: Install dependencies
         run: |
           venv/bin/pip install --no-cache-dir -r lab3/good_cicd/requirements.txt
+
 
       - name: Test
         env:
