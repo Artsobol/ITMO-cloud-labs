@@ -33,16 +33,19 @@ jobs:
         run: |
           pytest lab3/good_cicd/tests --cov=lab3/good_cicd/src
 
+      - name: Build Docker Image
+        run: |
+          docker build -t myapp -f lab3/good_cicd/Dockerfile lab3/good_cicd
+
       - name: Deploy
         env:
-         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
-         echo "Deploying..."
-         echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-         docker build -t myapp -f lab3/good_cicd/Dockerfile lab3/good_cicd
-         docker tag myapp $DOCKER_USERNAME/myapp:latest
-         docker push $DOCKER_USERNAME/myapp:latest
+          echo "Deploying..."
+          echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+          docker tag myapp $DOCKER_USERNAME/myapp:latest
+          docker push $DOCKER_USERNAME/myapp:latest
 
       - name: Clean up environment
         run: |
