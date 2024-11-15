@@ -85,7 +85,9 @@ jobs:
  
  P.S. указанный аккаунт на докерхабе мы создали специально для этой лабы, поэтому ничем не рискуем
  
- Посмотреть запущенные пайплайны можно по [ссылке](https://github.com/Artsobol/ITMO-cloud-labs/tree/main/.github/workflows).
+ Посмотреть запущенные пайплайны можно по [ссылке](https://github.com/Artsobol/ITMO-cloud-labs/actions).
+
+ Cами CI/CD файлы можно посмотреть [тут]([https://github.com/Artsobol/ITMO-cloud-labs/tree/main/.github/workflows)
 
 
 ### Хороший CI/CD
@@ -159,14 +161,20 @@ jobs:
 #### Запустили пайплайн с хорошим ci/cd. Успех!!
  <img src="good_ci-cd.png" alt="good ci/cd pipeline" width="800"/>
  
- Посмотреть запущенные пайплайны можно по [ссылке](https://github.com/Artsobol/ITMO-cloud-labs/tree/main/.github/workflows).
+ Посмотреть запущенные пайплайны можно по [ссылке](https://github.com/Artsobol/ITMO-cloud-labs/actions).
+
+ Cами CI/CD файлы можно посмотреть [тут]([https://github.com/Artsobol/ITMO-cloud-labs/tree/main/.github/workflows)
+
 
 
 ## Вывод:
  Мы ознакомились с принципами написания хорошего CI/CD файла, а так же наиболее часто встречающимися ошибками.
 <img src="mishka2.jpg" alt="mishka" width="800"/>
 
-Посмотреть запущенные пайплайны можно по [ссылке](https://github.com/Artsobol/ITMO-cloud-labs/tree/main/.github/workflows).
+ Посмотреть запущенные пайплайны можно по [ссылке](https://github.com/Artsobol/ITMO-cloud-labs/actions).
+
+ Cами CI/CD файлы можно посмотреть [тут]([https://github.com/Artsobol/ITMO-cloud-labs/tree/main/.github/workflows)
+
 
  ## Всем добра и позитива:3
              
