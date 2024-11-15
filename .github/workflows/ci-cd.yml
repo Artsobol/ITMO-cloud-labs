@@ -40,7 +40,7 @@ jobs:
         run: |
          echo "Deploying..."
          echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-         docker build -t myapp .
+         docker build -t myapp -f lab3/good_cicd/Dockerfile lab3/good_cicd
          docker tag myapp $DOCKER_USERNAME/myapp:latest
          docker push $DOCKER_USERNAME/myapp:latest
 
