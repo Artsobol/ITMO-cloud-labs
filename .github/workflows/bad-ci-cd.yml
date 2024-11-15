@@ -30,11 +30,10 @@ jobs:
             
       - name: Deploy
         env:
-          DOCKER_USERNAME: your_username
-          DOCKER_PASSWORD: your_password
+          DOCKER_USERNAME: artsobol06
+          DOCKER_PASSWORD: Pn@q9ET#Ejkn@a4
         run: |
             echo "Deploying..."
-            docker login -u artsobol06 -p Pn@q9ET#Ejkn@a4
-            docker build -t myapp .
-            docker tag myapp your_username/myapp:latest
-            docker push your_username/myapp:latest
+            docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+            docker tag myapp artsobol06/myapp:latest
+            docker push artsobol06/myapp:latest
