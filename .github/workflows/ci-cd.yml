@@ -18,6 +18,9 @@ jobs:
       - name: Create virtual environment
         run: python -m venv venv
 
+      - name: Ensure pip cache directory exists
+        run: mkdir -p ~/.cache/pip
+
       - name: Cache pip dependencies
         uses: actions/cache@v3
         with:
@@ -29,7 +32,6 @@ jobs:
       - name: Install dependencies
         run: |
           venv/bin/pip install --no-cache-dir -r lab3/good_cicd/requirements.txt
-
 
       - name: Test
         env:
