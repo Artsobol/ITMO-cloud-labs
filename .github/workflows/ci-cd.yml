@@ -33,10 +33,6 @@ jobs:
         run: |
           pytest lab3/good_cicd/tests --cov=lab3/good_cicd/src
 
-      - name: Build
-        run: |
-         python setup.py sdist bdist_wheel
-
       - name: Deploy
         env:
          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
