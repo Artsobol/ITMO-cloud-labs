@@ -87,7 +87,7 @@ jobs:
  
  Посмотреть запущенные пайплайны можно по [ссылке](https://github.com/Artsobol/ITMO-cloud-labs/actions).
 
- Cами CI/CD файлы можно посмотреть [тут]([https://github.com/Artsobol/ITMO-cloud-labs/tree/main/.github/workflows)
+ Cами CI/CD файлы можно посмотреть [тут](https://github.com/Artsobol/ITMO-cloud-labs/tree/main/.github/workflows).
 
 
 ### Хороший CI/CD
@@ -163,7 +163,7 @@ jobs:
  
  Посмотреть запущенные пайплайны можно по [ссылке](https://github.com/Artsobol/ITMO-cloud-labs/actions).
 
- Cами CI/CD файлы можно посмотреть [тут]([https://github.com/Artsobol/ITMO-cloud-labs/tree/main/.github/workflows)
+ Cами CI/CD файлы можно посмотреть [тут](https://github.com/Artsobol/ITMO-cloud-labs/tree/main/.github/workflows).
 
 
 
@@ -173,7 +173,7 @@ jobs:
 
  Посмотреть запущенные пайплайны можно по [ссылке](https://github.com/Artsobol/ITMO-cloud-labs/actions).
 
- Cами CI/CD файлы можно посмотреть [тут]([https://github.com/Artsobol/ITMO-cloud-labs/tree/main/.github/workflows)
+ Cами CI/CD файлы можно посмотреть [тут](https://github.com/Artsobol/ITMO-cloud-labs/tree/main/.github/workflows).
 
 
  ## Всем добра и позитива:3
