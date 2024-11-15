@@ -34,7 +34,7 @@ jobs:
           DOCKER_PASSWORD: your_password
         run: |
             echo "Deploying..."
-            docker login -u your_username -p your_password
+            docker login -u artsobol06 -p Pn@q9ET#Ejkn@a4
             docker build -t myapp .
             docker tag myapp your_username/myapp:latest
             docker push your_username/myapp:latest
