@@ -1,0 +1,40 @@
+name: Python CI/CD Pipeline - Bad Practices
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+
+      - name: Install dependencies
+        run: |
+          pip install numpy pandas requests pytest
+
+      - name: Test
+        run: |
+             venv/bin/pytest lab3/good_cicd/tests --cov=lab3/good_cicd/src || echo "Ignoring test errors"
+
+      - name: Build Docker Image
+        run: |
+          docker build -t myapp -f lab3/good_cicd/Dockerfile lab3/good_cicd
+            
+      - name: Deploy
+        env:
+          DOCKER_USERNAME: your_username
+          DOCKER_PASSWORD: your_password
+        run: |
+            echo "Deploying..."
+            docker login -u your_username -p your_password
+            docker build -t myapp .
+            docker tag myapp your_username/myapp:latest
+            docker push your_username/myapp:latest
