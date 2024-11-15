@@ -33,20 +33,20 @@ jobs:
         run: |
           pytest lab3/good_cicd/tests --cov=lab3/good_cicd/src
 
-      #- name: Build
-      #  run: |
-      #    python setup.py sdist bdist_wheel
+      - name: Build
+        run: |
+         python setup.py sdist bdist_wheel
 
-      #- name: Deploy
-      #  env:
-      #    DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      #    DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      #  run: |
-      #    echo "Deploying..."
-      #    echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-      #    docker build -t myapp .
-      #    docker tag myapp $DOCKER_USERNAME/myapp:latest
-      #    docker push $DOCKER_USERNAME/myapp:latest
+      - name: Deploy
+        env:
+         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: |
+         echo "Deploying..."
+         echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+         docker build -t myapp .
+         docker tag myapp $DOCKER_USERNAME/myapp:latest
+         docker push $DOCKER_USERNAME/myapp:latest
 
       - name: Clean up environment
         run: |
