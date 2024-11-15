@@ -15,23 +15,26 @@ jobs:
         with:
           python-version: 3.8
 
+      - name: Create virtual environment
+        run: python -m venv venv
+
       - name: Cache pip dependencies
         uses: actions/cache@v3
         with:
-          path: ~/.cache/pip
+          path: venv/lib/python3.8/site-packages
           key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
-            
+
       - name: Install dependencies
         run: |
-          pip install --no-cache-dir -r lab3/good_cicd/requirements.txt
+          venv/bin/pip install --no-cache-dir -r lab3/good_cicd/requirements.txt
 
       - name: Test
         env:
           PYTHONPATH: .
         run: |
-          pytest lab3/good_cicd/tests --cov=lab3/good_cicd/src
+          venv/bin/pytest lab3/good_cicd/tests --cov=lab3/good_cicd/src
 
       - name: Build Docker Image
         run: |
