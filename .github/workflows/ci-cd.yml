@@ -28,7 +28,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          venv/bin/pip install --no-cache-dir -r lab3/good_cicd/requirements.txt
+           venv/bin/pip install -r lab3/good_cicd/requirements.txt
 
       - name: Test
         env:
