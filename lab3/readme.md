@@ -110,18 +110,35 @@ jobs:
         with:
           python-version: 3.8
 
+      - name: Cache pip dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
       - name: Create virtual environment
         run: python -m venv venv
 
       - name: Install dependencies
         run: |
-          venv/bin/pip install --no-cache-dir -r lab3/good_cicd/requirements.txt
+          venv/bin/pip install -r lab3/good_cicd/requirements.txt
 
       - name: Test
         env:
           PYTHONPATH: .
         run: |
           venv/bin/pytest lab3/good_cicd/tests --cov=lab3/good_cicd/src
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-20.04
+    needs: build
+  
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Build Docker Image
         run: |
@@ -141,6 +158,7 @@ jobs:
         run: |
           rm -rf dist build *.egg-info
           docker logout
+
 ```
 
 #### Что мы исправили?
@@ -157,9 +175,27 @@ jobs:
     Используем GitHub secrets для безопасной аутентификации в Docker.
 5. ```rm -rf dist build *.egg-info```
     Добавили очистку окружения для удаления временных файлов по завершению работы.
+6. Добавили кеширование установки зависимостей в  CI/CD процесс, использовав встроенный в GitHub Actions cache для кеширования папки с установленными зависимостями.
+    ```
+    - name: Cache pip dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+          ${{ runner.os }}-pip-
+      ```
+7. Перенесли деплой на ветку main
+  ```
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-20.04
+    needs: build
+  ```
+  
 
 #### Запустили пайплайн с хорошим ci/cd. Успех!!
- <img src="good_ci-cd.png" alt="good ci/cd pipeline" width="800"/>
+ <img src="good-ci-cd-build.png" alt="good ci/cd pipeline" width="800"/>
  
  Посмотреть запущенные пайплайны можно по [ссылке](https://github.com/Artsobol/ITMO-cloud-labs/actions).
 
