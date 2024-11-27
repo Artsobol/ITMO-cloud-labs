@@ -28,13 +28,22 @@ jobs:
 
       - name: Install dependencies
         run: |
-           venv/bin/pip install -r lab3/good_cicd/requirements.txt
+          venv/bin/pip install -r lab3/good_cicd/requirements.txt
 
       - name: Test
         env:
           PYTHONPATH: .
         run: |
           venv/bin/pytest lab3/good_cicd/tests --cov=lab3/good_cicd/src
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-20.04
+    needs: build
+  
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Build Docker Image
         run: |
@@ -54,3 +63,4 @@ jobs:
         run: |
           rm -rf dist build *.egg-info
           docker logout
+
