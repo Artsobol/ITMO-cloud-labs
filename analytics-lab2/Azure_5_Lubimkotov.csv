@@ -1,0 +1,48 @@
+IT Tower,Service Family,Service Type,Service Sub Type,Service Usage Type,Meter Category,Meter Sub-Category,Meter Name,Consumed Service
+Cloud Services,Analytics,Microsoft Analysis Services,Prodiving Data Model,Standart Service Level,Analysis Services,Tabular,Standard S%,Microsoft.AnalysisServices
+Cloud Services,Analytics,Microsoft Analysis Services,Prodiving Data Model,Basic Service Level,Analysis Services,Tabular,Basic B%,Microsoft.AnalysisServices
+Cloud Services,Analytics,Microsoft Analysis Services,Prodiving Data Model,Developer Service Level,Analysis Services,Tabular,Developer (Hours),Microsoft.AnalysisServices
+Cloud Services,Analytics,Microsoft Analysis Services,Basic Tier,Solutions with Small Models,Azure Analysis Services,Basic,B%,Microsoft.AnalysisServices
+Cloud Services,Analytics,Microsoft Analysis Services,Developer Tier,Development and Testing,Azure Analysis Services,Developer,Developer,Microsoft.AnalysisServices
+Cloud Services,Analytics,Microsoft Analysis Services,Standart Tier,Mission-Critical Applications,Azure Analysis Services,Standard,S%,Microsoft.AnalysisServices
+Databases,Databases,Microsoft Azure Database,Azure Database,MySQL Using,Azure Database for PostgreSQL,,,Microsoft.DBforMyQL
+Databases,Databases,Microsoft Azure Database,Azure Database,PostgreSQL Using,Azure Database for PostgreSQL,,,Microsoft.DBforPostgreSQL
+Cloud Services,AI/MI,Microsoft Azure Database,Data Analysis,Workflow Analytics,Azure Databricks,,%Data Analytics%,Microsoft.Databricks
+Cloud Services,AI/MI,Microsoft Azure Database,Data Engineering,Processing Level Optimization,Azure Databricks,,%Data Engineering%,Microsoft.Databricks
+Cloud Services,Development Operations,Microsoft Azure Monitor,Application Insights,Webhook Notify,Azure Monitor,Notifications,Webhook,microsoft.insights
+Cloud Services,Development Operations,Microsoft Azure Monitor,Application Insights,Email Notify,Azure Monitor,Notifications,Email,microsoft.insights
+Compute,Compute,Microsoft Virtual Machines,Microsoft Batch,HIgh Perfomance Computer,Virtual Machines,,,Microsoft.Batch
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,Development and Testing,Virtual Machines,A Series Basic%,,%Compute
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,Development and Testing,Virtual Machines,A%,,%Compute
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,Economical Virtual Machines,Virtual Machines,B%,,%Compute
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,General Purpose Compute,Virtual Machines,D%,D1/%,%Compute
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,General Purpose Compute,Virtual Machines,D%,D1 %,%Compute
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,General Purpose Compute,Virtual Machines,D%,D1%,%Compute
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,General Purpose Compute,Virtual Machines,D%,D%,%Compute
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,Hyper-Threaded Applications,Virtual Machines,E%,,%Compute
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,Compute optimized VM,Virtual Machines,F%,,%Compute
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,Compute optimized VM,Virtual Machines,Standard_F4 VM (Windows),Compute Hours,%Compute
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,High Perfomance Computing,Virtual Machines,G%,,%Compute
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,High Performance Computing VM,Virtual Machines,H%,,%Compute
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,Storage Optimized VM,Virtual Machines,L%,,%Compute
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,Memory Optimized VM,Virtual Machines,M%,,%Compute
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,GPU Enabled VM,Virtual Machines,N%,,%Compute
+Compute,Compute,Microsoft Virtual Machines,Microsoft Virtual Machines,Series Selections,Virtual Machines,S%,,%Compute
+Compute,Compute,Microsoft Machine Learning,Microsoft Data Science VM,Cloud Data,Virtual Machines,,,Microsoft.MachineLearningServices
+Networking,Networking,Microsoft Virtual Network,Microsft a Private Network,Resource Interaction,Virtual Network,,,
+Networking,Networking,Microsoft Load Balancer,Microsoft Load Balancer,Distributing Compute,Load Balancer,,,Microsoft.Batch
+Networking,Networking,Microsoft Machine Learning,Microsoft Model Load Balancer,Distributing Compute,Load Balancer,,,Microsoft.MachineLearningServices
+Networking,Networking,Microsoft Load Balancer,Microsoft Load Balancer,Distributing Web Compute,Load Balancer,,,Microsoft.Network
+Cloud Services,Web,Microsoft Azure Signal-R,Application Update,Adding Web Functionality to App,SignalR,,,Microsoft.SignalRService
+Cloud Services,Integration,Microsoft Event Grid,Event Handler,Operations for Events,Event Grid,,Operations,
+Storage,Storage,Microsoft Storage Service,Transferring data from Storage,Data Transfer Out,Windows Azure - All Services,All,Data Transfer Out%,Microsoft.Storage
+Cloud Services,Media,Microsoft Media Services,Azure Media Services,Broadcast Quality for Devices,Media Services,,,microsoft.media
+Cloud Services,Internet of Things,Microsoft Internet of Things,Azure IoT Hub,Communication between Devices,IoT Hub,,,Microsoft.Devices
+Cloud Services,Analytics,Microsoft Analytics Service,Azure Synapse Analytics,Big Data Analytics,SQL Data Warehouse,%Storage,,Microsoft.Sql
+Storage,Storage,Microsoft Analytics Service,Azure Synapse Analytics,SQL Analytics,Storage,,,Microsoft.Sql
+Storage,Storage,Microsoft Azure Backup,Azure Backup,Data Backup,Storage,,,microsoft._ackup
+Storage,Storage,Microsoft Azure Site Recovery,Azure Backup,Data Recovery from Storage,Storage,,,Microsoft.RecoveryServices
+Storage,Storage,Microsoft Azure Storage,Microsoft Cloud Storage,File Operation,Storage,,,%_torage%
+Storage,Storage,Microsoft Compute,VM,Storage,Storage,,,Microsoft.Compute
+Storage,Storage,Microsoft Machine Learning,Model Integration with Storage,Data Storage,Storage,,,Microsoft.MachineLearningServices
+Storage,Storage,Microsoft Azure Storage,Computing Storage,High-Perfomance Computing,Storage,,,Microsoft.Batch
