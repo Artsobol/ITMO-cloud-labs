@@ -52,7 +52,8 @@ jobs:
       - name: Authenticate with Doppler
         env:
           DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
-        run: doppler login --token $DOPPLER_TOKEN
+        run: doppler setup --token $DOPPLER_TOKEN --no-prompt
+
 
       - name: Build Docker Image
         run: |
