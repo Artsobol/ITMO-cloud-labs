@@ -46,7 +46,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install Doppler CLI
-        run: curl -sLf --retry 3 --retry-delay 2 https://cli.doppler.com/install.sh | sh
+        run: sudo curl -sLf --retry 3 --retry-delay 2 https://cli.doppler.com/install.sh | sudo sh
+
 
       - name: Authenticate with Doppler
         env:
