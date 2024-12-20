@@ -45,15 +45,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Install Doppler CLI
+        run: curl -sLf --retry 3 --retry-delay 2 https://cli.doppler.com/install.sh | sh
+
+      - name: Authenticate with Doppler
+        env:
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
+        run: doppler login --token $DOPPLER_TOKEN
+
       - name: Build Docker Image
         run: |
           docker build -t myapp -f lab3/good_cicd/Dockerfile lab3/good_cicd
 
       - name: Deploy
         env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
         run: |
+          echo "Fetching secrets..."
+          DOCKER_USERNAME=$(doppler secrets get DOCKER_USERNAME --plain)
+          DOCKER_PASSWORD=$(doppler secrets get DOCKER_PASSWORD --plain)
+
           echo "Deploying..."
           echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
           docker tag myapp $DOCKER_USERNAME/myapp:latest
@@ -63,4 +74,3 @@ jobs:
         run: |
           rm -rf dist build *.egg-info
           docker logout
-
