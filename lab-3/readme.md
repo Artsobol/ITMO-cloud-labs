@@ -98,8 +98,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install Doppler CLI
-        run: sudo curl -sLf --retry 3 --retry-delay 2 https://cli.doppler.com/install.sh | sudo sh
-
+        uses: dopplerhq/cli-action@v3
 
       - name: Authenticate with Doppler
         env:
@@ -134,10 +133,9 @@ jobs:
 
 1. ```
     - name: Install Doppler CLI
-        run: sudo curl -sLf --retry 3 --retry-delay 2 https://cli.doppler.com/install.sh | sudo sh
+        uses: dopplerhq/cli-action@v3
     ```
-Мы добавили установку Doppler CLI в деплое. Здесь важно использовать привилегии суперпользователя (sudo прописать в общем)
-
+Мы добавили установку Doppler CLI через GitHub Actions
 2.  ```
     - name: Authenticate with Doppler
         env:
